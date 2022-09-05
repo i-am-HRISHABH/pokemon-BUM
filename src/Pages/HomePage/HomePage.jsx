@@ -941,7 +941,7 @@ const HomePage = () => {
         <div className="h-r-description">
           This is a beta version, deployed for testing purpose only. For any
           queries or suggestion regarding design and features please contact me
-          via email- kumarhrishabh9429@gmail.com
+          via email- hrishabhkumarofficial@gmail.com
         </div>
       </div>
     </div>

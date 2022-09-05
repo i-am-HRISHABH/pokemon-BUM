@@ -24,11 +24,12 @@
 .att-circle {
   height: 3rem;
   width: 3rem;
-  background: black;
+  background: var(--blueColor);
   border-radius: 3rem;
   position: absolute;
   text-align: center;
   display: flex;
+  font-weight: 600;
   flex-direction: column;
   justify-content: center;
   color: white;

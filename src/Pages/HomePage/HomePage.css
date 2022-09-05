@@ -221,19 +221,18 @@
     align-items: center;
   }
   .h-r-name > :nth-child(1) {
-    height: 2.2rem;
+    height: 2rem;
   }
   .h-r-name > :nth-child(2) {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
   .h-r-stats {
     margin: 0 auto;
     margin-top: 0;
     width: 80%;
-    background: rebeccapurple;
   }
   .h-r-statbox {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
   }
   .h-r-description {

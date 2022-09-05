@@ -187,6 +187,14 @@
   .h-l-image {
     margin-bottom: 1rem;
   }
+  .h-l-search-box > :nth-child(1) {
+    border: none;
+    padding: 0.8rem;
+    width: 70%;
+    border-radius: 2rem;
+    font-weight: 600;
+    padding-left: 1.5rem;
+  }
   .h-r-image {
     left: 0%;
     width: 410px;
@@ -223,5 +231,16 @@
     margin-top: 3rem;
     font-weight: bold;
     color: rgba(0, 0, 0, 0.222);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .h-r-image {
+    left: 0%;
+    width: 250px;
+    height: 250px;
+    position: static;
+    margin: 0 auto;
+    margin-top: 1rem;
   }
 }

@@ -3,10 +3,9 @@
 }
 .h-left {
   flex: 1;
-  /* background: rgba(0, 0, 0, 0.162); */
   padding-left: 2rem;
   height: 100vh;
-  /* position: relative; */
+  position: relative;
 }
 .h-l-image {
   background: url("../../images/pokemon.png");
@@ -91,20 +90,19 @@
 .h-l-gamestart {
   background: black;
   color: white;
-  width: 15%;
+  width: 35%;
   font-size: 1.2rem;
   font-weight: 600;
   padding: 1rem 0;
   border-radius: 2rem;
   position: absolute;
-  bottom: 6rem;
+  bottom: 5rem;
   cursor: pointer;
 }
 .h-right {
   flex: 1.5;
   background: var(--yellowColor);
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
-  /* position: relative; */
 }
 
 .h-r-name {
@@ -129,15 +127,13 @@
   text-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 .h-r-image {
-  width: 30%;
+  width: 71%;
   height: 60%;
-
   /* background: rgba(12, 12, 12, 0.199); */
-  /* background: url("../../images/charizard-nobg.png"); */
   background-size: contain;
   position: absolute;
   top: 8rem;
-  right: 30rem;
+  right: -26rem;
   z-index: 1;
 }
 .h-r-stats {
@@ -171,7 +167,61 @@
 
   margin: 0 6rem;
   margin-top: 6rem;
-  /* font-size: 1.1rem; */
   font-weight: bold;
   color: rgba(0, 0, 0, 0.222);
+}
+
+@media only screen and (max-width: 600px) {
+  .h-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .h-left {
+    height: 500px;
+    flex: 1;
+    padding-left: 1rem;
+  }
+  .h-l-text2 {
+    margin-bottom: 1.5rem;
+  }
+  .h-l-image {
+    margin-bottom: 1rem;
+  }
+  .h-r-image {
+    left: 0%;
+    width: 410px;
+    height: 400px;
+    position: static;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+  .h-l-gamestart {
+    position: fixed;
+    right: 9%;
+    bottom: 91%;
+    font-size: 0.9rem;
+  }
+  .h-right {
+    flex: 1;
+    background: var(--yellowColor);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .h-r-name {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .h-r-stats {
+    margin-left: 2rem;
+    margin-top: 0;
+    width: 80%;
+  }
+  .h-r-description {
+    width: 80%;
+    margin: 1rem auto;
+    margin-top: 3rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.222);
+  }
 }

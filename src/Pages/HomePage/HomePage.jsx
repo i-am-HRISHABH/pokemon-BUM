@@ -859,9 +859,7 @@ const HomePage = () => {
   return (
     <div className="h-main">
       <div className="h-left">
-        <div className="h-l-image">
-          {/* <img src={require("../../images/pokemon.png")} alt="pokemon" /> */}
-        </div>
+        <div className="h-l-image"></div>
         <div className="h-l-text1">Catch 'Em All!</div>
         <div className="h-l-text2">Find Your Pokemon here...</div>
         <div className="h-l-search-box">
@@ -906,7 +904,6 @@ const HomePage = () => {
         </button>
         <img
           className="h-r-image"
-          // src={require("../../images/charizard-nobg.png")}
           src={
             imageUrl === "montu"
               ? require("../../images/charizard-nobg.png")

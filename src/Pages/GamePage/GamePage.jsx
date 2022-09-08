@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import Lives from "../../Components/Lives/Lives";
 import "./GamePage.css";
 import Attribute from "../../Components/Attribute/Attribute";
+import { useNavigate } from "react-router-dom";
 
 let rivalStat = 0;
 
 const GamePage = () => {
+  //useNavigate variable
+  let navigate = useNavigate();
+
   const [rivalImageUrl, setRivalImageUrl] = useState("");
   const [rivalImageSize, setRivalImageSize] = useState(0);
   const [rivalLives, setRivalLives] = useState(3);
@@ -64,6 +68,10 @@ const GamePage = () => {
     });
     setUserLives(3);
     setRivalLives(3);
+  };
+
+  const returnhome = () => {
+    navigate("/");
   };
 
   const clash = () => {
@@ -206,7 +214,7 @@ const GamePage = () => {
   return (
     <div className="g-wrapper">
       <div className="g-left">
-        <div className="g-l-image"></div>
+        <div className="g-l-image" onClick={returnhome}></div>
         <div className="g-l-image2"></div>
         <div className="g-l-actionzone">
           <div className="g-l-rival">
@@ -225,8 +233,8 @@ const GamePage = () => {
                 style={
                   rivalImageSize === 1
                     ? {
-                        height: "20rem",
-                        width: "20rem",
+                        height: "100%",
+                        width: "100%",
                         transition: "250ms ease-in",
                       }
                     : null
@@ -251,8 +259,8 @@ const GamePage = () => {
                 style={
                   userimageSize === 1
                     ? {
-                        height: "20rem",
-                        width: "20rem",
+                        height: "100%",
+                        width: "100%",
                         transition: "250ms ease-in",
                       }
                     : null

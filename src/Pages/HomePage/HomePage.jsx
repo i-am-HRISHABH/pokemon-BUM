@@ -2,8 +2,12 @@ import React from "react";
 import { useState } from "react";
 import Attribute from "../../Components/Attribute/Attribute";
 import "./HomePage.css";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  //useNavigate varibale
+  let navigate = useNavigate();
+
   const [imageUrl, setImageUrl] = useState("montu");
   const [inputvalue, setinputvaue] = useState("");
   const [name, setName] = useState("charizard");
@@ -829,8 +833,8 @@ const HomePage = () => {
     setinputvaue(e.target.value);
   };
 
-  const underConstruction = () => {
-    alert("This feature is under development");
+  const startgame = () => {
+    navigate("/game");
   };
 
   const findPokemon = () => {
@@ -899,7 +903,7 @@ const HomePage = () => {
               );
             })}
         </div>
-        <button className="h-l-gamestart" onClick={underConstruction}>
+        <button className="h-l-gamestart" onClick={startgame}>
           START GAME
         </button>
         <img

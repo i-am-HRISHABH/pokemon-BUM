@@ -9,7 +9,7 @@ const Attribute = (props) => {
       <div className="att-fullbar"></div>
       <div
         className="att-colorbar"
-        style={{ width: `${fill < 18 ? 19 : fill}%` }}
+        style={{ width: `${fill < 18 ? 19 : fill > 100 ? 100 : fill}%` }}
       ></div>
       <div className="att-circle">{fill}</div>
     </div>

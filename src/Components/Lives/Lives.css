@@ -1,0 +1,13 @@
+.l-wrapper {
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  width: fit-content;
+}
+.l-life {
+  background: url("../../images/pokeball.png");
+  background-size: contain;
+  height: 2rem;
+  width: 2rem;
+}

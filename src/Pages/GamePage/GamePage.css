@@ -307,16 +307,16 @@
     /* background: aqua; */
     height: fit-content;
     /* position: absolute; */
-    bottom: 13.5rem;
+    bottom: 10rem;
     /* margin-left: 66vw; */
     left: 1rem;
   }
   .g-l-fightbutton > :nth-child(1) {
-    /* font-size: 1.1rem; */
+    font-size: 1rem;
     /* font-weight: 600; */
     /* background: black; */
     /* color: white; */
-    /* padding: 0.8rem 2.5rem; */
+    padding: 0.8rem 1.5rem;
     /* border-radius: 2rem; */
     /* border: 1px solid black; */
     /* cursor: pointer; */

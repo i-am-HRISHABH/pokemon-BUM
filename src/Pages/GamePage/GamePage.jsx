@@ -78,13 +78,13 @@ const GamePage = () => {
     if (rivalImageSize === 1) {
       let templife;
       if (rivalStat > userStats.base[eventStats.selectedStat]) {
-        alert("Your pokemon lost :" + rivalStat);
+        alert("YOU LOST! rival stat : " + rivalStat);
         templife = userLives - 1;
         setUserLives(templife);
       } else if (rivalStat === userStats.base[eventStats.selectedStat]) {
-        alert("You both have ended in tie :" + rivalStat);
+        alert("BATTLE TIED! rival stat : " + rivalStat);
       } else {
-        alert("You pokemon won rival :" + rivalStat);
+        alert("YOU WON! rival stat : " + rivalStat);
         templife = rivalLives - 1;
         setRivalLives(templife);
       }
@@ -158,8 +158,8 @@ const GamePage = () => {
     if (userimageSize === 1 && eventStats.selectedStat !== "") {
       let index = Math.floor(Math.random() * 810);
       rivalStat = PokemonStats[index].base[eventStats.selectedStat];
-      console.log("seected stat :" + eventStats.selectedStat);
-      console.log("reival stats :" + rivalStat);
+      // console.log("seected stat :" + eventStats.selectedStat);
+      // console.log("reival stats :" + rivalStat);
       fetch(
         `https://pokeapi.co/api/v2/pokemon/${pokemonName[index].toLowerCase()}`
       )

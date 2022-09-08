@@ -4,8 +4,6 @@ import HomePage from "./Pages/HomePage/HomePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  // return <GamePage />;
-  // return <HomePage />;
   return (
     <div>
       <Router>

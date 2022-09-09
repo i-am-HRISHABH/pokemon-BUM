@@ -3,12 +3,23 @@ import Lives from "../../Components/Lives/Lives";
 import "./GamePage.css";
 import Attribute from "../../Components/Attribute/Attribute";
 import { useNavigate } from "react-router-dom";
+import RevealSound from "../../Sound/reveal.wav";
+import ClickSound from "../../Sound/select.wav";
+import WinSound from "../../Sound/won.mp3";
+import LostSound from "../../Sound/lost.wav";
+import Category from "../../Components/Category/Category";
 
 let rivalStat = 0;
 
 const GamePage = () => {
   //useNavigate variable
   let navigate = useNavigate();
+
+  //sounds
+  const revealPokemon = new Audio(RevealSound);
+  const selectAttributeSound = new Audio(ClickSound);
+  const winSound = new Audio(WinSound);
+  const lostSound = new Audio(LostSound);
 
   const [rivalImageUrl, setRivalImageUrl] = useState("");
   const [rivalImageSize, setRivalImageSize] = useState(0);
@@ -24,7 +35,7 @@ const GamePage = () => {
       chinese: "妙蛙种子",
       french: "Bulbizarre",
     },
-    type: ["Grass", "Poison"],
+    type: ["Normal"],
     base: {
       HP: 0,
       Attack: 0,
@@ -52,7 +63,7 @@ const GamePage = () => {
         chinese: "妙蛙种子",
         french: "Bulbizarre",
       },
-      type: ["Grass", "Poison"],
+      type: ["Normal"],
       base: {
         HP: 0,
         Attack: 0,
@@ -78,12 +89,14 @@ const GamePage = () => {
     if (rivalImageSize === 1) {
       let templife;
       if (rivalStat > userStats.base[eventStats.selectedStat]) {
+        lostSound.play();
         alert("YOU LOST! rival stat : " + rivalStat);
         templife = userLives - 1;
         setUserLives(templife);
       } else if (rivalStat === userStats.base[eventStats.selectedStat]) {
         alert("BATTLE TIED! rival stat : " + rivalStat);
       } else {
+        winSound.play();
         alert("YOU WON! rival stat : " + rivalStat);
         templife = rivalLives - 1;
         setRivalLives(templife);
@@ -103,7 +116,7 @@ const GamePage = () => {
         chinese: "妙蛙种子",
         french: "Bulbizarre",
       },
-      type: ["Grass", "Poison"],
+      type: ["Normal"],
       base: {
         HP: 0,
         Attack: 0,
@@ -148,6 +161,7 @@ const GamePage = () => {
           selectedBox: 4,
         };
       }
+      selectAttributeSound.play();
       setEventStats(tempObj);
     } else {
       alert("Open Your PokeBALL first");
@@ -173,6 +187,7 @@ const GamePage = () => {
           alert("Pokemon not found");
         });
       setTimeout(() => {
+        revealPokemon.play();
         setRivalImageSize(1);
       }, 2000);
     } else {
@@ -198,6 +213,7 @@ const GamePage = () => {
           alert("Pokemon not found");
         });
       setTimeout(() => {
+        revealPokemon.play();
         setUserImageSize(1);
       }, 2000);
     } else {
@@ -283,6 +299,10 @@ const GamePage = () => {
           <div></div>
           <div>{userStats.name.english.toUpperCase()}</div>
         </div>
+        <div className="g-category">
+          <Category carray={userStats.type} />
+        </div>
+
         <div className="g-stats">
           <div
             className="g-stats-item"

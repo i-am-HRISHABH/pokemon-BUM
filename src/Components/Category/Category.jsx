@@ -6,7 +6,7 @@ const Category = (props) => {
     if (val === "Fire") {
       return "#FF6D03";
     } else if (val === "Poison") {
-      return "#ad00f";
+      return "#AD00F";
     } else if (val === "Water") {
       return "#3E8AFC";
     } else if (val === "Bug") {

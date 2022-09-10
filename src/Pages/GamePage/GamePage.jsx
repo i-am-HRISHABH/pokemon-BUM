@@ -235,6 +235,8 @@ const GamePage = () => {
         <div className="g-l-actionzone">
           <div className="g-l-rival">
             <div className="g-l-lifes">
+              <div className="g-life-name">Rival</div>
+              <div className="g-life-seperator"></div>
               <Lives life={rivalLives} />
             </div>
             <div className="g-l-r-image">
@@ -261,6 +263,8 @@ const GamePage = () => {
           <div className="g-l-vs"></div>
           <div className="g-l-user">
             <div className="g-l-lifes">
+              <div className="g-life-name">User</div>
+              <div className="g-life-seperator"></div>
               <Lives life={userLives} />
             </div>
             <div className="g-l-u-image">
